@@ -1,12 +1,19 @@
-# React + Vite
+# Dylan Martin – Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my personal developer portfolio showcasing projects, experience, and skills as a full-stack developer and startup founder. Built to highlight clean UI/UX and interactive 3D elements.
 
-Currently, two official plugins are available:
+## 🌐 Live Site
+[Visit my portfolio here](https://dylanmartin.dev) <!-- replace with your live site URL -->
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
+- Interactive, clean design highlighting projects and experience.
+- 3D models and animations for an engaging user experience.
+- Fully responsive and mobile-friendly.
+- Sections for contact, skills, projects, and work experience.
+- Built using [Vite](https://vite.dev) for fast performance.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+- **Frontend:** React, JavaScript, TailwindCSS
+- **3D Rendering:** Three.js
+- **Build Tools:** Vite
+- **Deployment:** Hostinger
