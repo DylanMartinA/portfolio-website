@@ -1,76 +1,48 @@
-import {words} from "../Constants/index.js";
-import Button from "../components/Button";
-import HeroExperience from "../components/HeroExperience.jsx";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import {AnimatedCounter} from "../components/AnimatedCounter.jsx";
+import SkillsMesh from "../components/SkillsMesh.jsx";
 
 const Hero = () => {
-    useGSAP(() => {
-        gsap.fromTo('.hero-text h1',
-        {
-            y: 50,
-            opacity: 0
-        },
-        {
-            y: 0,
-            opacity: 1,
-            stagger: 0.2,
-            duration: 1
-        },
-    )
-    })
-
     return (
         <section id="hero" className="relative overflow-hidden">
+            <div className="eng-grid-bg" />
 
-            <div className="hero-layout">
-                {/*LEFT: Hero Content */}
-                <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
-                    <div className="flex flex-col gap-7">
-                        <div className="hero-text">
-                            <h1>
-                                Shaping
-                                <span className="slide">
-                                    <span className="wrapper">
-                                        {words.map((word) => (
-                                                <span key={word.text} className="flex items-center md:gap-3 gap-1 pb-2">
-                                                    <img
-                                                    src={word.imgPath}
-                                                    alt={word.text}
-                                                    className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50"
-                                                    />
+            <div className="hero-hud padding-x-lg">
+                <div className="hero-mesh-wrap">
+                    <SkillsMesh />
+                </div>
 
-                                                    <span>{word.text}</span>
-                                                </span>
-                                            ))}
-                                    </span>
-                                </span>
-                            </h1>
-                            <h1>into Real Projects</h1>
-                            <h1>that Deliver Results</h1>
-                        </div>
+                <div
+                    className="hero-panel relative z-10 w-full md:w-[640px]"
+                    style={{ animation: 'heroRise 0.9s ease-out both' }}
+                >
+                    <span className="corner corner-tl" />
+                    <span className="corner corner-tr" />
+                    <span className="corner corner-bl" />
+                    <span className="corner corner-br" />
 
-                        <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-                            Hi, I'm Dylan, a Software Engineer and CEO based in Biotech and Sustainability
-                        </p>
-                        <Button
-                        className="md:w-80 md:h-16 w-60 h-12"
-                        id="button"
-                        text="See my Work"
-                        />
+                    <div className="hero-eyebrow">
+                        <span className="dot" />
+                        <span>Engineer</span>
                     </div>
-                </header>
 
-                {/*RIGHT: 3d Model Canvas Area */}
-                <figure>
-                    <div className="hero-3d-layout">
-                        <HeroExperience />
+                    <h1 className="text-[32px] md:text-[46px] font-semibold leading-[1.1] tracking-tight">
+                        I engineer products that actually <span className="text-accent">ship.</span>
+                    </h1>
+
+                    <p className="mt-5 text-sm md:text-base text-white-50 max-w-md">
+                        Full-stack software engineer building products across biotech and sustainability.
+                    </p>
+
+                    <div className="flex items-center gap-6 mt-8">
+                        <a href="#work" className="hero-cta">
+                            View Work
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M5 12h14M13 6l6 6-6 6" />
+                            </svg>
+                        </a>
+                        <a href="#contact" className="hero-secondary-link">get in touch &rarr;</a>
                     </div>
-                </figure>
+                </div>
             </div>
-
-            <AnimatedCounter />
         </section>
     )
 }
